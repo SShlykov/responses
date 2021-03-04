@@ -28,7 +28,7 @@ YourApp.Guardian.encode_and_sign(resource, %{}, ttl: {1, :minute})
  with {:ok, user} <- get_by_login(login),
          do: verify_password(password, user)
 
-# На вот такой, он не слишком короче из-за обработки ошибки, 
+# На вот такой, он не упадет и обработает ошибку 
 
 
 with {:ok, user} <- get_by_login(login),
